@@ -1,0 +1,35 @@
+<odoo>
+    <record id="payment_provider_qnb" model="payment.provider">
+        <field name="name">QNB</field>
+        <field name="provider">qnb</field>
+<!--        <field name="state">enabled</field>-->
+        <field name="image_128" type="base64" file="payment_qnb/static/src/img/qnb_logo.png"/>
+        <field name="qnb_merchant_id">TESTQNBAATEST001</field>
+        <field name="qnb_api_key">merchant.TESTQNBAATEST001</field>
+        <field name="qnb_api_secret">9c6a123857f1ea50830fa023ad8c8d1b</field>
+        <field name="qnb_currency">EGP</field>
+        <field name="qnb_transaction_mode">purchase</field>
+        <field name="qnb_host_url">qnbalahli.test.gateway.mastercard.com</field>
+    </record>
+
+    <record id="payment_method_visa" model="payment.provider">
+        <field name="name">Visa</field>
+        <field name="provider">qnb</field>
+        <field name="state">enabled</field> <!-- تفعيل وسيلة الدفع -->
+        <field name="image_128" type="base64" file="payment_qnb/static/src/img/Visa_Acceptance_Sign.png"/>
+    </record>
+
+    <record id="payment_method_mastercard" model="payment.provider">
+        <field name="name">MasterCard</field>
+        <field name="provider">qnb</field>
+        <field name="state">enabled</field> <!-- تفعيل وسيلة الدفع -->
+        <field name="image_128" type="base64" file="payment_qnb/static/src/img/MasterCard_Acceptance_Sign.png"/>
+    </record>
+
+    <record id="payment_method_meeza" model="payment.provider">
+        <field name="name">Meeza</field>
+        <field name="provider">qnb</field>
+        <field name="state">enabled</field> <!-- تفعيل وسيلة الدفع -->
+        <field name="image_128" type="base64" file="payment_qnb/static/src/img/meeza_cards_logo.png"/>
+    </record>
+</odoo>

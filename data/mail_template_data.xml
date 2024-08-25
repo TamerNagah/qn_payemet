@@ -1,0 +1,12 @@
+<odoo>
+    <record id="mail_template_qnb_notify_debit" model="mail.template">
+        <field name="name">QNB: Charge Notification</field>
+        <field name="model_id" ref="payment.model_payment_transaction"/>
+        <field name="subject">QNB: Charge Notification</field>
+        <field name="email_from">{{ object.company_id.email }}</field>
+        <field name="email_to">{{ object.partner_id.email_formatted }}</field>
+        <field name="body_html" type="html">
+            <!-- محتوى البريد الإلكتروني هنا -->
+        </field>
+    </record>
+</odoo>

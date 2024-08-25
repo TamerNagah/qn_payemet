@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- تعديل على شاشة Payment Provider -->
+    <record id="view_payment_provider_form" model="ir.ui.view">
+        <field name="name">payment.provider.form</field>
+        <field name="model">payment.provider</field>
+        <field name="arch" type="xml">
+            <form string="Payment Provider">
+                <sheet>
+                    <group>
+                        <group name="payment_state">
+                            <field name="state" widget="radio"/>
+                            <!-- إزالة القيد على الحقل company_id -->
+                            <field name="company_id" options="{'no_create': True}"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <!-- تبويب بيانات الاعتماد -->
+                        <page string="Credentials" name="credentials">
+                            <group>
+                                <field name="qnb_api_key"/>
+                                <field name="qnb_api_secret"/>
+                                <field name="qnb_merchant_id"/>
+                                <field name="qnb_currency"/>
+                            </group>
+                        </page>
+                        <!-- تبويب التهيئة -->
+                        <page string="Configuration" name="configuration">
+                            <group>
+                                <field name="journal_id"/>
+                                <field name="payment_flow"/>
+                                <field name="support_tokenization"/>
+                            </group>
+                        </page>
+                        <!-- تبويب الرسائل -->
+                        <page string="Messages" name="messages">
+                            <group>
+                                <field name="pre_msg"/>
+                                <field name="pending_msg"/>
+                                <field name="auth_msg"/>
+                                <field name="done_msg"/>
+                                <field name="cancel_msg"/>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>
